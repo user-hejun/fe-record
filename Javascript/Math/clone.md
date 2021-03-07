@@ -1,5 +1,5 @@
 # 浅拷贝与深拷贝
-## 浅拷贝实现方式
+## 浅拷贝实现
 ```
 1. 直接用 = 赋值
 2. Object.assign()
@@ -51,28 +51,28 @@ const deepClone = function(obj, hash = new WeakMap()) {
 }
 ```
 * 验证代码
-* ```
-    let obj = {
-        num: 0,
-        str: '',
-        boolean: true,
-        unf: undefined,
-        nul: null,
-        obj: { name: '对象', id: 1},
-        arr: [0,1,2],
-        func: function() {console.log('我是一个函数')},
-        date: new Date(),
-        reg: new RegExp('/我是正则/ig'),
-        [Symbol('1')]: 1,
-    };
+```
+let obj = {
+    num: 0,
+    str: '',
+    boolean: true,
+    unf: undefined,
+    nul: null,
+    obj: { name: '对象', id: 1},
+    [Symbol('1')]: 1,
+    date: new Date(),
+    reg: new RegExp('/我是正则/ig'),
+    arr: [0,1,2],
+    func: function() {console.log('我是一个函数')},
+};
 
-    Object.defineProperty(obj, 'innumerable', {
-        enumerable: false, value: '不可枚举属性'
-    })
-    obj = Object.create(obj, Object.getOwnPropertyDescriptors(obj)) 
-    obj.loop = obj;
-    let cloneObj = deepClone(obj);
-    cloneObj.arr.push(4);
-    console.log('obj', obj);
-    console.log('cloneObj', cloneObj);
-    ```
+Object.defineProperty(obj, 'innumerable', {
+    enumerable: false, value: '不可枚举属性'
+})
+obj = Object.create(obj, Object.getOwnPropertyDescriptors(obj)) 
+obj.loop = obj;
+let cloneObj = deepClone(obj);
+cloneObj.arr.push(4);
+console.log('obj', obj);
+console.log('cloneObj', cloneObj);
+```
