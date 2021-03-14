@@ -29,3 +29,6 @@ typeof null === 'object'
 ```
 Object.prototype.toString.call();
 ```
+***
+
+## 类型转化
