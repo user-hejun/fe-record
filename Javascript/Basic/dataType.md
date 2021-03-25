@@ -31,4 +31,7 @@ Object.prototype.toString.call();
 ```
 ***
 
+<!-- 4. ### constructor
+Obj.constructor === [String, Boolean, Date,] -->
+
 ## 类型转化

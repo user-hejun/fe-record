@@ -41,7 +41,7 @@ const deepClone = function(obj, hash = new WeakMap()) {
     if(hash.has(obj)) {
         return hash.get(obj)
     }
-    let allDesc = Object.getOwnPropertyDescriptors(obj)
+    let allDesc = Object.getOwnPropertyDescriptors(obj)  // 用来获取一个对象的所有自身属性的描述符。
     let cloneObj = Object.create(Object.getPrototypeOf(obj))
     hash.set(obj, cloneObj)
     for(let key of Reflect.ownKeys(obj)){

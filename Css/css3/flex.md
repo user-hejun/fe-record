@@ -4,6 +4,7 @@
 ## Flex 容器(采用 Flex 布局的元素)
 |  容器属性  |  属性值  |  描述  
 |   --  | -- | -- 
+|  display        | flex, inline-flex | 
 | flex-direction  | row, row-reverse , column , column-reverse                    | 属性决定主轴的方向（即项目的排列方向） 
 | flex-warp       | nowarp, warp, warp-reverse                                    | 轴线如何换行 
 | flex-flow       | flex-direction 与 flex-wrap的简写                              | 是flex-direction属性和flex-wrap属性的简写形式
